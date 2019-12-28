@@ -14,7 +14,7 @@ export default function SummaryPage() {
     <>
       <div className={styles.header}>
         <h1>ผลวิเคราะห์การทำแบบทดสอบ</h1>
-        <h2>รายวิชา ค22101 คณิตศาสตร์พื้นฐาน 2</h2>
+        <h2>รายวิชา ส21102 สังคมศึกษา 3</h2>
         <h3>เรื่อง สมการเชิงเส้นพื้นฐาน</h3>
       </div>
       <Chart />

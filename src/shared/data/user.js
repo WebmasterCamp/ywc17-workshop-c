@@ -1,5 +1,5 @@
 export default {
-    name: 'Somchai Rackchart',
+    name: 'สมชาย รักชาติ',
     subjects: [
         {
             code: 'ส22101',
