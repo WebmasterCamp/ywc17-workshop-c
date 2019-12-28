@@ -57,7 +57,7 @@ export default function Question(props) {
       {!props.isAnswer && (
         <div className={styles.navigation}>
           {!props.isFirst && (
-            <Button onClick={props.onPrevQuestion}>ข้อก่อนหน้า</Button>
+            <Button onClick={props.onPrevQuestion} isBack={true}>ข้อก่อนหน้า</Button>
           )}
           {!props.isLast && (
             <Button onClick={props.onNextQuestion}>ข้อถัดไป</Button>

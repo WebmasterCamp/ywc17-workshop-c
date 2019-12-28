@@ -48,8 +48,8 @@ export default function QuizPage(props) {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <h1>คณิตศาสตร์พื้นฐาน 2 เรื่อง สมการเชิงเส้น</h1>
-        <p className={styles.description}>แบบทดสอบก่อนเรียน พื้นฐานบทเรียน</p>
+        <h1>สังคมศึกษา ศาสนา และวัฒนธรรม 2 เรื่อง เศรษฐศาสตร์</h1>
+        <p className={styles.description}>แบบทดสอบหลังเรียน</p>
       </div>
       <Question
         isFirst={parseInt(currentQuestionNumber) === 1}
