@@ -1,7 +1,7 @@
 .button {
     font-family: 'Kanit', sans-serif;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     background-color: #66CCB8;
     color: white;
     border: none;
@@ -9,11 +9,22 @@
     padding: 8px 12px;
 }
 
+.buttonSmall {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    background-color: #66CCB8;
+    color: white;
+    border: none;
+    border-radius: .4rem;
+    padding: 8px;
+}
+
 .buttonBack {
     font-family: 'Kanit', sans-serif;
     color: #7E7E7E;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     background-color: Transparent;
     border: none;
     border-radius: .4rem;
