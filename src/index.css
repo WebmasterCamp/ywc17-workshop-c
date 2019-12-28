@@ -18,3 +18,9 @@ p {
     font-family: "Sarabun", serif;
     font-size: 14px;
 }
+
+
+li a.active {
+  color: white!important;
+  border-bottom: 2px solid #66CCB8;
+}
