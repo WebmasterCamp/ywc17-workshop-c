@@ -27,6 +27,14 @@ export default function QuizPage() {
     return history.push(`/quiz/${parseInt(questionNumber) - 1}`);
   }
 
+  const answerHandler = () => {
+
+  }
+
+  const bookmarkHandler = () => {
+    
+  }
+
   return (
     <div>
       <QuestionNavigation numberofQuestion={questions.length} currentQuestionNumber={currentQuestionNumber} onChangeQuestion={setQuestionHandler} />

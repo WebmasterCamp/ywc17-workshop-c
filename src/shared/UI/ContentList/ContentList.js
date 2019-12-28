@@ -8,7 +8,7 @@ export default function ContentList() {
     return (
         <div>
             ContentList
-            {mock.map(m => <ContentItem />)}
+            {mock.map((_, index) => <ContentItem key={index} />)}
         </div>
     )
 }
