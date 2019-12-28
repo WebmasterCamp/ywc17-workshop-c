@@ -1,20 +1,32 @@
 .container {
     display: flex;
     flex-direction: column;
-    width: 80%;
+    width: 100%;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 16px;
 }
 
 .question {
-    margin-bottom: 16px;
+    margin-right: 16px;
 }
 
 .choices {
     display: grid;
-    grid-column-start: 2;
+    grid-template-columns: 2;
+    margin: 16px 48px;
+}
+
+.choices div {
+    margin-bottom: 1rem;
 }
 
 .navigation {
     margin-top: 20px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
