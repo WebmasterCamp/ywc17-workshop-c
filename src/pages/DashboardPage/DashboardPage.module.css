@@ -1,4 +1,10 @@
 .courseContainer {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     display: flex;
     justify-content: space-around;
+}
+
+.courseContainer div {
+    margin-right: 1rem;
 }
