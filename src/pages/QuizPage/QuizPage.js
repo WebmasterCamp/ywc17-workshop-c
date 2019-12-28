@@ -11,9 +11,9 @@ export default function QuizPage() {
     const [questions, setQuestions] = useState(MOCK_QUESTIONS);
     return (
         <div>
-            {/* <Question /> */}
             <QuestionNavigation numberofQuestion={questions.length} />
             {questions && questions.map(question => <Question question={question} isAnswer={false} />)}
         </div>
+
     )
 }
