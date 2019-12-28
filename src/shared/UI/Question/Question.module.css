@@ -4,6 +4,14 @@
     width: 80%;
 }
 
+.question {
+    margin-bottom: 16px;
+}
+
 .choices {
     display: flex;
+}
+
+.navigation {
+    margin-top: 20px;
 }
