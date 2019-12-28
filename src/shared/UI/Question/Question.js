@@ -1,4 +1,5 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 import { faBookmark as solidBookmark } from '@fortawesome/free-solid-svg-icons';
@@ -14,6 +15,14 @@ export default function Question(props) {
         props.onAnswer(props.questionNumber, choiceIndex);
     }
 
+    let history = useHistory();
+
+    const submitAnswerHandler = () => {
+       if (window.confirm("คุณแน่ใจหรือไม่ที่จะส่งคำตอบ")) {
+        history.push("/summary");
+       }
+    }
+
     return (
         <div className={styles.container}>
             <h2 className={styles.question}>{props.questionNumber}. {props.question.question}</h2>
@@ -24,8 +33,9 @@ export default function Question(props) {
                 }
             </div>
             {!props.isAnswer && <div className={styles.navigation}>
-                {!props.isFirst && <Button onClick={props.onPrevQuestion}>Back</Button>}
-                {!props.isLast && <Button onClick={props.onNextQuestion}>Next</Button>}
+                {!props.isFirst && <Button onClick={props.onPrevQuestion}>ข้อก่อนหน้า</Button>}
+                {!props.isLast && <Button onClick={props.onNextQuestion}>ข้อถัดไป</Button>}
+                {props.isLast && <Button onClick={submitAnswerHandler}>ส่งคำตอบ</Button>}
             </div>}
             {props.isAnswer && <AnswerExplanation {...props}></AnswerExplanation>}
         </div>
