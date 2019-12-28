@@ -10,20 +10,26 @@ import QuestionNavigation from "../../shared/UI/QuestionNavigation/QuestionNavig
 
 export default function QuizPage() {
   const [questions, setQuestions] = useState(MOCK_QUESTIONS);
+  const [answers, setAnswers] = useState([]);
+  const [bookmark, setBookmark] = useState([]);
   const { currentQuestionNumber } = useParams();
   const history = useHistory();
 
   const nextQuestionHandler = () => {
-    if (currentQuestionNumber < questions.length) return history.push(`/quiz/${parseInt(currentQuestionNumber) + 1}`)
+    if (currentQuestionNumber < questions.length) return history.push(`/quiz/${parseInt(currentQuestionNumber) + 1}`);
   }
 
   const prevQuestionHandler = () => {
-    if (currentQuestionNumber > 1) return history.push(`/quiz/${parseInt(currentQuestionNumber) - 1}`)
+    if (currentQuestionNumber > 1) return history.push(`/quiz/${parseInt(currentQuestionNumber) - 1}`);
+  }
+
+  const setQuestionHandler = (questionNumber) => {
+    return history.push(`/quiz/${parseInt(questionNumber) - 1}`);
   }
 
   return (
     <div>
-      <QuestionNavigation numberofQuestion={questions.length} />
+      <QuestionNavigation numberofQuestion={questions.length} currentQuestionNumber={currentQuestionNumber} onChangeQuestion={setQuestionHandler} />
       <Question isFirst={parseInt(currentQuestionNumber) === 1} isLast={parseInt(currentQuestionNumber) === questions.length} questionNumber={currentQuestionNumber} question={questions[currentQuestionNumber - 1]} isAnswer={false} onNextQuestion={nextQuestionHandler} onPrevQuestion={prevQuestionHandler} />
     </div>
   );
