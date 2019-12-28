@@ -29,6 +29,11 @@ export default function Choice(props) {
           <div className={styles.circleWhite}></div>
         </div>
       )}
+      {props.isAnswer && !props.isCorrect && !props.isSelect && (
+        <div className={styles.colorBar}>
+          <div className={styles.circle}></div>
+        </div>
+      )}
       {!props.isAnswer && (
         <div className={styles.colorBar}>
           <div className={styles.circle}></div>

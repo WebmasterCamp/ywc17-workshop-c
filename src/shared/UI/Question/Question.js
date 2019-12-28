@@ -37,7 +37,7 @@ export default function Question(props) {
         <h2 className={styles.question}>
           {props.questionNumber}. {props.question.question}
         </h2>
-        <div style={{display: 'flex', justifyContent: 'space-around'}}>{props.isAnswer && props.question.topics.map(topic => <div style={{border: '1px solid black', borderRadius: '1rem', padding: '.5rem', margin: '0 1rem'}}>{topic}</div>)}</div>
+        {/* <div style={{display: 'flex', justifyContent: 'space-around'}}>{props.isAnswer && props.question.topics.map(topic => <div style={{border: '1px solid black', borderRadius: '1rem', padding: '.5rem', margin: '0 1rem'}}>{topic}</div>)}</div> */}
         {props.isBookmark ? (
           <FontAwesomeIcon icon={solidBookmark} color="#E08322" size="2x" onClick={bookmarkHandler} />
         ) : (
@@ -85,7 +85,7 @@ export default function Question(props) {
       {props.isAnswer && (
         <div style={{marginBottom: '2rem'}}>
         {isCorrect && <p>คุณตอบคำถามได้ถูกต้อง {props.question.answerExplanation[props.question.answer]}</p>}
-      {!isCorrect && <p>คุณเลือก {props.question.choices[props.studentAnswer]} ซึ่ง {props.question.answerExplanation[props.studentAnswer]} ดังนั้น {props.question.choices[props.question.answer]} เป็นคำตอบที่ถูกต้อง เนื่องจาก {props.question.answerExplanation[props.answer]}</p>}
+      {!isCorrect && <p>คุณเลือก "{props.question.choices[props.studentAnswer]}" ซึ่ง {props.question.answerExplanation[props.studentAnswer]} ดังนั้น "{props.question.choices[props.question.answer]}" เป็นคำตอบที่ถูกต้อง เนื่องจาก {props.question.answerExplanation[props.question.answer]}</p>}
         </div>
       )}
     </div>
