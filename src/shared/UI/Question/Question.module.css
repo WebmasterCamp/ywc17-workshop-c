@@ -40,3 +40,6 @@
     align-items: flex-end;
 }
 
+p {
+    line-height: 1.5;
+}
