@@ -4,7 +4,7 @@ import { Bar } from 'react-chartjs-2';
 import styles from './Chart.module.css';
 
 const data = {
-  labels: ['จุดและความชัน', 'สมการเชิงเส้นสองตัวแปร', 'รูปแบบมาตรฐาน'],
+  labels: ['กลไกราคา', 'พื้นฐานเศรษฐศาสตร์', 'ปัจจัยการผลิต'],
   datasets: [
     {
       label: 'จำนวนข้อที่ตอบถูก',

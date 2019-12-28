@@ -15,7 +15,7 @@ export default function SummaryPage() {
       <div className={styles.header}>
         <h1>ผลวิเคราะห์การทำแบบทดสอบ</h1>
         <h2>รายวิชา ส21102 สังคมศึกษา 3</h2>
-        <h3>เรื่อง สมการเชิงเส้นพื้นฐาน</h3>
+        <h3>เรื่อง เศรษฐศาสตร์</h3>
       </div>
       <Chart />
       <div className={styles.contentListContainer}>
@@ -24,14 +24,14 @@ export default function SummaryPage() {
         <div>
           <h2>จุดแข็ง</h2>
           <ul class={styles.contentList}>
-            <li>รูปแบบมาตรฐาน</li>
+            <li>กลไกราคา</li>
           </ul>
         </div>
         <div>
           <h2>จุดอ่อน</h2>
           <ul class={styles.contentList}>
-            <li>สมการเชิงเส้นสองตัวแปร</li>
-            <li>จุดและความชัน</li>
+            <li>พื้นฐานเศรษฐศาสตร์</li>
+            <li>ปัจจัยการผลิต</li>
           </ul>
         </div>
       </div>
