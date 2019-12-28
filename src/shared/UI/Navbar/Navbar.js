@@ -18,7 +18,7 @@ export default function Navbar() {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/quiz">Quiz</Link>
+            <Link to="/quiz/1">Quiz</Link>
           </li>
           <li>
             <Link to="/summary">Summary</Link>

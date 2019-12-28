@@ -5,7 +5,7 @@ import QuestionStatus from './QuestionStatus/QuestionStatus';
 export default function QuestionNavigation(props) {
     let QuestionStatusList = [];
     for (let i=1; i <= props.numberofQuestion; i++) {
-        QuestionStatusList.push(<QuestionStatus questionNumber={i} status="done" isMarked={true} />)
+        QuestionStatusList.push(<QuestionStatus key={i} questionNumber={i} status="done" isMarked={true} />)
     }
     return (
         <div className={styles.questionNavigationContainer}>
