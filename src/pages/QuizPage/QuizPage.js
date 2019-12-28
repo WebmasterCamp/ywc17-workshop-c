@@ -8,7 +8,7 @@ import MOCK_QUESTION from '../../shared/data/questions';
 export default function QuizPage() {
     return (
         <div>
-            <Question question={MOCK_QUESTION[0]} isAnswer={false} />)
+            <Question question={MOCK_QUESTION[0]} isAnswer={false} />
         </div>
 
     )

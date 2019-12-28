@@ -15,8 +15,8 @@ export default function SummaryPage() {
             <h1>SummaryPage</h1>
              <Chart />
              <ContentList />
-             <QuestionNavigation />
              <Question question={MOCK_QUESTION[0]} isAnswer={true} studentAnswer={MOCK_STUDENTANSWER[0]} />
+             <QuestionNavigation />
         </div>
     )
 }
