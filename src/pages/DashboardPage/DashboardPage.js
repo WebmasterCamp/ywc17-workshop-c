@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import styles from "./DashboardPage.module.css";
 
@@ -12,6 +13,7 @@ export default function DashboardPage() {
       {MOCK_USER_DATA.subjects.map(subject => (
         <>
           <h1>{subject.name}</h1>
+          {subject.courses.length > 6 ? <Link /> : ''}
           <div className={styles.courseContainer}>
              {subject.courses.map(course => <Card course={course} color={subject.colors} />)}
           </div>
