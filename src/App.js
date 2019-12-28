@@ -30,7 +30,7 @@ export default function App() {
             </Route>
           </Switch>
         </Centered>
-        <Footer />
+        {/* <Footer /> */}
       </>
     </Router>
   );

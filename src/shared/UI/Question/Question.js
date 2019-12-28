@@ -28,7 +28,7 @@ let history = useHistory();
         <h2 className={styles.question}>
           {props.questionNumber}. {props.question.question}
         </h2>
-        {!props.isBookmark && (props.isBookmark ? (
+        {(props.isBookmark ? (
           <FontAwesomeIcon
             icon={solidBookmark}
             color="#E08322"
