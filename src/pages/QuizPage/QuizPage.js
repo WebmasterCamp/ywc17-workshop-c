@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-// import styles from './QuizPage.module.css';
+import styles from './QuizPage.module.css';
 
 import MOCK_QUESTIONS from '../../shared/data/questions';
 
