@@ -18,13 +18,13 @@ export default function Navbar() {
           <li>
             <NavLink activeClassName="active" to="/" exact>หน้าหลัก</NavLink>
           </li>
-          <li>
+          {/* <li>
             <Link>ผลการทดสอบ</Link>
-          </li>
-          <div style={{margin: 'auto'}}></div>
+          </li> */}
+          {/* <div style={{margin: 'auto'}}></div>
           <li>
             <FontAwesomeIcon activeClassName="active" icon={faUserCircle} size="3x" color="#66CCB8" />
-          </li>
+          </li> */}
         </ul>
       </Centered>
     </nav>
