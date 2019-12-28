@@ -29,3 +29,13 @@
 .doneStatus.marked {
     border: 7px double white;
 }
+
+p {
+    padding: 0!important;
+}
+
+@media (max-width: 350px) {
+    .questionStatusContainer {
+        margin: 3rem 0;
+    }
+  }
