@@ -8,4 +8,4 @@ export default [
         topics: ['th-ch1-1', 'th-ch2-7'],
         bookmark: false
     }
-]
+];
