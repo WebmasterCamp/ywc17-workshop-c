@@ -3,11 +3,13 @@
 h1 {
   font-family: "Kanit", serif;
   font-size: 32px;
+  margin-bottom: 20px;
 }
 
 h2 {
   font-family: "Kanit", serif;
-  font-size: 20px;
+  font-size: 24px;
+  margin-bottom: 12px;
 }
 
 h3 {
@@ -16,7 +18,7 @@ h3 {
 }
 p {
     font-family: "Sarabun", serif;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 
