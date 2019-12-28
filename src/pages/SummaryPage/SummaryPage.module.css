@@ -1,3 +1,26 @@
 .contentListContainer {
     display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.header h1, .header h2, .header h3 {
+    line-height: 1.5;
+} 
+
+.contentList {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sarabun';
+    list-style: circle;
+}
+
+.contentList h2 {
+    margin-bottom: 1rem;
 }

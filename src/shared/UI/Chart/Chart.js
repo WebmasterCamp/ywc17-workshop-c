@@ -4,16 +4,25 @@ import { Bar } from 'react-chartjs-2';
 import styles from './Chart.module.css';
 
 const data = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+  labels: ['จุดและความชัน', 'สมการเชิงเส้นสองตัวแปร', 'รูปแบบมาตรฐาน'],
   datasets: [
     {
-      label: 'My First dataset',
-      backgroundColor: 'rgba(255,99,132,0.2)',
-      borderColor: 'rgba(255,99,132,1)',
+      label: 'จำนวนข้อที่ตอบถูก',
+      backgroundColor: 'rgba(102, 204, 184, .2)',
+      borderColor: 'rgba(102, 204, 184, 1)',
       borderWidth: 1,
-      hoverBackgroundColor: 'rgba(255,99,132,0.4)',
-      hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [65, 59, 80, 81, 56, 55, 40]
+      hoverBackgroundColor: 'rgba(102, 204, 184, .4)',
+      hoverBorderColor: 'rgba(102, 204, 184, 1)',
+      data: [0, 2, 3]
+    },
+    {
+      label: 'จำนวนข้อที่ตอบผิด',
+      backgroundColor: 'rgba(239, 102, 159, .2)',
+      borderColor: 'rgba(239, 102, 159, 1)',
+      borderWidth: 1,
+      hoverBackgroundColor: 'rgba(239, 102, 159, .4)',
+      hoverBorderColor: 'rgba(239, 102, 159, .1)',
+      data: [2, 4, 1]
     }
   ]
 };
