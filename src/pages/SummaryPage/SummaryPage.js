@@ -27,7 +27,7 @@ export default function SummaryPage() {
         <div classname={styles.contentWrapper}>
           <h2>เนื้อหาที่ทำได้ดี</h2>
           <ul class={styles.contentList}>
-            <li><Link to="/content">กลไกราคา</Link></li>
+            <li>-</li>
           </ul>
         </div>
         <div classname={styles.contentWrapper}>
