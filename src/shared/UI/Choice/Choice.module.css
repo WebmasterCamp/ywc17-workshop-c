@@ -27,8 +27,7 @@
     width: 80px;
     height: 100%;
     border-radius: 12px 0px 0px 12px;
-    background: transparent linear-gradient(180deg, #35529e 0%, #c5aacd 100%) 0%
-      0% no-repeat padding-box;
+    background-color: #66CCB8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -38,8 +37,7 @@
     width: 80px;
     height: 100%;
     border-radius: 12px 0px 0px 12px;
-    background: transparent linear-gradient(180deg, #35529e 0%, #c5aacd 100%) 0%
-      0% no-repeat padding-box;
+    background-color:#D84178;
     display: flex;
     justify-content: center;
     align-items: center;
