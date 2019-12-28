@@ -14,9 +14,9 @@ export default function Card(props) {
       />
       <div className={styles.course}>
         <h2>{props.course.name}</h2>
-        <h3>{props.course.description}</h3>
+        <p>{props.course.description}</p>
         <div className={styles.bottom}>
-          <p>{props.course.questionLength}</p>
+          <p>จำนวน {props.course.questionLength} ข้อ</p>
           <Button data="เริ่มแบบทดสอบ"></Button>
         </div>
       </div>

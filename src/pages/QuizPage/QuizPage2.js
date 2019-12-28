@@ -36,9 +36,9 @@ export default function QuizPage() {
   }
 
   return (
-    <div>
-      <QuestionNavigation numberofQuestion={questions.length} currentQuestionNumber={currentQuestionNumber} onChangeQuestion={setQuestionHandler} />
+    <div className={styles.container}>
       <Question isFirst={parseInt(currentQuestionNumber) === 1} isLast={parseInt(currentQuestionNumber) === questions.length} questionNumber={currentQuestionNumber} question={questions[currentQuestionNumber - 1]} isAnswer={false} onNextQuestion={nextQuestionHandler} onPrevQuestion={prevQuestionHandler} />
+      <QuestionNavigation numberofQuestion={questions.length} currentQuestionNumber={currentQuestionNumber} onChangeQuestion={setQuestionHandler} />
     </div>
   );
 }
