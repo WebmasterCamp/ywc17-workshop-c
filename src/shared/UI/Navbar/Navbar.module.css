@@ -7,9 +7,12 @@
     font-size: 1.2rem;
     color: #C9C9C9;
     background: rgba(0, 0, 0, .5);
+    display: flex;
+    align-items: center;
 }
 
 .menuContainer {
+    height: 100%;
     display: flex;
     align-items: center;  
     padding-top: .2rem;  
