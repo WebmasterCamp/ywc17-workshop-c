@@ -7,7 +7,7 @@ import {
 } from "react-router-dom";
 
 import DashboardPage from './pages/DashboardPage/DashboardPage';
-import QuizPage from './pages/QuizPage/QuizPage';
+import QuizPage from './pages/QuizPage/QuizPage2';
 import SummaryPage from './pages/SummaryPage/SummaryPage';
 
 import Navbar from './shared/UI/Navbar/Navbar';
