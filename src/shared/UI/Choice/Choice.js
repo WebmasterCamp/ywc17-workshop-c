@@ -19,9 +19,6 @@ export default function Choice(props) {
       className={`${styles.container} ${selected}`}
       onClick={chooseAnswerHandler}
     >
-{/* <div>isAnswer:{props.isAnswer ? 'true' : 'false'}</div>
-<div>isCorrect:{props.isCorrect  ? 'true' : 'false'}</div>
-<div>isSelect:{props.isselect  ? 'true' : 'false'}</div> */}
       {props.isAnswer && props.isCorrect && (
         <div className={styles.colorBarGreen}>
           <div className={styles.circleWhite}></div>
@@ -32,12 +29,7 @@ export default function Choice(props) {
           <div className={styles.circleWhite}></div>
         </div>
       )}
-      {!props.isAnswer && props.isSelect && (
-        <div className={styles.colorBarSelected}>
-          <div className={styles.circleWhite}></div>
-        </div>
-      )}
-      {!props.isAnswer && !props.isSelect && (
+      {!props.isAnswer && (
         <div className={styles.colorBar}>
           <div className={styles.circle}></div>
         </div>
