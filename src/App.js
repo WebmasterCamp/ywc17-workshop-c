@@ -3,9 +3,9 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
+import Centered from './shared/Layout/Centered/Centered';
 import DashboardPage from './pages/DashboardPage/DashboardPage';
 import QuizPage from './pages/QuizPage/QuizPage2';
 import SummaryPage from './pages/SummaryPage/SummaryPage';
@@ -15,8 +15,9 @@ import Navbar from './shared/UI/Navbar/Navbar';
 export default function App() {
   return (
     <Router>
-      <div>
+      <>
         <Navbar />
+        <Centered>
         <Switch>
           <Route exact path="/quiz">
             <QuizPage />
@@ -28,7 +29,8 @@ export default function App() {
             <DashboardPage />
           </Route>
         </Switch>
-      </div>
+        </Centered>
+      </>
     </Router>
   );
 }
