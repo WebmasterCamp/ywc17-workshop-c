@@ -2,10 +2,15 @@ import React from "react";
 import styles from "./Choice.module.css";
 
 export default function Choice(props) {
+  let selected;
+  if (!props.isAnswer && props.currentAnswers[props.questionNumber - 1] == props.index) {
+    selected = styles.colorBarSelected;
+  }
+  let chooseAnswerHandler = props.onChoose ? (() => {props.onChoose(props.index)}) : (() => {});
   return (
     <div
-      className={styles.container}
-      onClick={props.onChoose.bind(null, props.index)}
+      className={`${styles.container} ${selected}`}
+      onClick={chooseAnswerHandler}
     >
       {props.isAnswer && props.isCorrect && (
         <div className={styles.colorBarGreen}>

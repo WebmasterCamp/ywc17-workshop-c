@@ -12,6 +12,7 @@ import AnswerExplanation from "../AnswerExplanation/AnswerExplanation";
 
 export default function Question(props) {
   const answerQuestionHandler = choiceIndex => {
+    if (!props.isAnswer) 
     props.onAnswer(props.questionNumber, choiceIndex);
   };
 
@@ -24,7 +25,7 @@ export default function Question(props) {
     }
   };
 
-  let bookmarkHandler = (() => props.onBookmark(props.questionNumber)) || (() => {});
+  let bookmarkHandler = props.onBookmark ? (() => props.onBookmark(props.questionNumber)) : (() => {});
 
   return (
     <div className={styles.container}>

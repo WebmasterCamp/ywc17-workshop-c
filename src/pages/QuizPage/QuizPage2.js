@@ -62,6 +62,7 @@ export default function QuizPage(props) {
         onPrevQuestion={prevQuestionHandler}
         onAnswer={answerHandler}
         onBookmark={bookmarkHandler}
+        currentAnswers={answers}
       />
       <QuestionNavigation
         numberofQuestion={questions.length}
