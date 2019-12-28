@@ -6,10 +6,8 @@ export default function Choice(props) {
     <div className={styles.container} onClick={props.onChoose.bind(null, props.index)}>
       <div
         className={styles.colorBar}
-        style={{
-          background: `transparent linear-gradient(180deg, #32529D 0%, , #C5AACD 100%) 0% 0% no-repeat padding-box`
-        }}
       />
+      <h3 className={styles.data}>{props.data}</h3>
     </div>
   );
 }

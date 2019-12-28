@@ -9,9 +9,12 @@
 }
 
 .choices {
-    display: flex;
+    display: grid;
+    grid-column-start: 2;
 }
 
 .navigation {
     margin-top: 20px;
+    display: flex;
+    justify-content: flex-end;
 }
