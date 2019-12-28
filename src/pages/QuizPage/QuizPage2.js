@@ -16,21 +16,47 @@ export default function QuizPage() {
   const history = useHistory();
 
   const nextQuestionHandler = () => {
-    if (currentQuestionNumber < questions.length) return history.push(`/quiz/${parseInt(currentQuestionNumber) + 1}`);
-  }
+    if (currentQuestionNumber < questions.length)
+      return history.push(`/quiz/${parseInt(currentQuestionNumber) + 1}`);
+  };
 
   const prevQuestionHandler = () => {
-    if (currentQuestionNumber > 1) return history.push(`/quiz/${parseInt(currentQuestionNumber) - 1}`);
-  }
+    if (currentQuestionNumber > 1)
+      return history.push(`/quiz/${parseInt(currentQuestionNumber) - 1}`);
+  };
 
-  const setQuestionHandler = (questionNumber) => {
+  const setQuestionHandler = questionNumber => {
     return history.push(`/quiz/${parseInt(questionNumber) - 1}`);
-  }
+  };
+
+  const answerHandler = (questionNumber, choiceIndex) => {
+    setAnswers(prevAnswers => {
+      let copied = [...prevAnswers];
+      copied[questionNumber - 1] = choiceIndex;
+      return copied;
+    });
+  };
+
+  const bookmarkHandler = () => {};
 
   return (
     <div className={styles.container}>
-      <Question isFirst={parseInt(currentQuestionNumber) === 1} isLast={parseInt(currentQuestionNumber) === questions.length} questionNumber={currentQuestionNumber} question={questions[currentQuestionNumber - 1]} isAnswer={false} onNextQuestion={nextQuestionHandler} onPrevQuestion={prevQuestionHandler} />
-      <QuestionNavigation numberofQuestion={questions.length} currentQuestionNumber={currentQuestionNumber} onChangeQuestion={setQuestionHandler} />
+      <Question
+        isFirst={parseInt(currentQuestionNumber) === 1}
+        isLast={parseInt(currentQuestionNumber) === questions.length}
+        questionNumber={currentQuestionNumber}
+        question={questions[currentQuestionNumber - 1]}
+        isAnswer={false}
+        onNextQuestion={nextQuestionHandler}
+        onPrevQuestion={prevQuestionHandler}
+        onAnswer={answerHandler}
+      />
+      <QuestionNavigation
+        numberofQuestion={questions.length}
+        currentQuestionNumber={currentQuestionNumber}
+        onChangeQuestion={setQuestionHandler}
+        currentAnswer={answers}
+      />
     </div>
   );
 }
