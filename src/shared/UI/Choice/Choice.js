@@ -7,12 +7,22 @@ export default function Choice(props) {
       className={styles.container}
       onClick={props.onChoose.bind(null, props.index)}
     >
-      {props.isSelect && (
-        <div className={styles.colorBarSelected}>
-          <div className={styles.circleSelected}></div>
+      {props.isAnswer && props.isCorrect && (
+        <div className={styles.colorBarGreen}>
+          <div className={styles.circleWhite}></div>
         </div>
       )}
-      {!props.isSelect && (
+      {props.isAnswer && !props.isCorrect && props.isSelect && (
+        <div className={styles.colorBarRed}>
+          <div className={styles.circleWhite}></div>
+        </div>
+      )}
+      {!props.isAnswer && props.isSelect && (
+        <div className={styles.colorBarSelected}>
+          <div className={styles.circleWhite}></div>
+        </div>
+      )}
+      {!props.isCorrect && !props.isSelect && (
         <div className={styles.colorBar}>
           <div className={styles.circle}></div>
         </div>

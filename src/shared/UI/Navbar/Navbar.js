@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
@@ -19,7 +19,7 @@ export default function Navbar() {
             <NavLink activeClassName="active" to="/" exact>หน้าหลัก</NavLink>
           </li>
           <li>
-            <NavLink to="/quiz/1">ผลการทดสอบ</NavLink>
+            <Link>ผลการทดสอบ</Link>
           </li>
           <div style={{margin: 'auto'}}></div>
           <li>

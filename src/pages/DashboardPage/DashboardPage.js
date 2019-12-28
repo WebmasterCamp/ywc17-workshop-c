@@ -15,7 +15,7 @@ export default function DashboardPage() {
           <h1>{subject.name}</h1>
           {subject.courses.length > 6 ? <Link /> : ''}
           <div className={styles.courseContainer}>
-             {subject.courses.map(course => <Card course={course} color={subject.colors} />)}
+             {subject.courses.map((course, i) => <Card key={i} course={course} color={subject.colors} />)}
           </div>
         </>
       ))}

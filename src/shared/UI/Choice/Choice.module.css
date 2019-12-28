@@ -28,6 +28,28 @@
   align-items: center;
 }
 
+.colorBarGreen {
+    width: 80px;
+    height: 100%;
+    border-radius: 12px 0px 0px 12px;
+    background: transparent linear-gradient(180deg, #35529e 0%, #c5aacd 100%) 0%
+      0% no-repeat padding-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .colorBarRed {
+    width: 80px;
+    height: 100%;
+    border-radius: 12px 0px 0px 12px;
+    background: transparent linear-gradient(180deg, #35529e 0%, #c5aacd 100%) 0%
+      0% no-repeat padding-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .data {
   display: flex;
   align-items: center;
@@ -41,7 +63,7 @@
   width: 40px;
 }
 
-.circleSelected {
+.circleWhite {
   border: 7px solid #ffffff;
   border-radius: 50%;
   height: 40px;

@@ -2,7 +2,8 @@ export default {
     name: 'Somchai Rackchart',
     subjects: [
         {
-            name: 'ค22101 คณิตศาสตร์พื้นฐาน 2',
+            code: 'ค22101',
+            name: 'คณิตศาสตร์พื้นฐาน 2',
             colors: ['#32529D', '#C5AACD'],
             courses: [
                 {

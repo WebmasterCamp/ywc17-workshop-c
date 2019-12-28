@@ -25,6 +25,9 @@ export default function App() {
             <Route exact path="/">
               <DashboardPage />
             </Route>
+            <Route path="*">
+              <DashboardPage />
+            </Route>
           </Switch>
         </Centered>
         <Footer />

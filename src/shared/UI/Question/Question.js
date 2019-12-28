@@ -20,7 +20,7 @@ export default function Question(props) {
         <h2 className={styles.question}>
           {props.questionNumber}. {props.question.question}
         </h2>
-        {props.isBookmark ? (
+        {props.isBookmark && (props.isBookmark ? (
           <FontAwesomeIcon
             icon={solidBookmark}
             color="#E08322"
@@ -34,7 +34,7 @@ export default function Question(props) {
             size="2x"
             onClick={props.onBookmark.bind(null, props.questionNumber)}
           />
-        )}
+        ))}
       </div>
       <div className={styles.choices}>
         {props.question.choices &&
@@ -44,6 +44,7 @@ export default function Question(props) {
               data={choice}
               index={index}
               onChoose={answerQuestionHandler}
+              {...props}
             />
           ))}
       </div>

@@ -8,7 +8,7 @@ import MOCK_QUESTIONS from "../../shared/data/questions";
 import Question from "../../shared/UI/Question/Question";
 import QuestionNavigation from "../../shared/UI/QuestionNavigation/QuestionNavigation";
 
-export default function QuizPage() {
+export default function QuizPage(props) {
   const [questions, setQuestions] = useState(MOCK_QUESTIONS);
   const [answers, setAnswers] = useState([]);
   const [bookmarks, setBookmarks] = useState([]);
