@@ -33,8 +33,8 @@ export default function SummaryPage() {
         <div classname={styles.contentWrapper}>
           <h2>เนื้อหาที่ควรศึกษาเพิ่มเติม</h2>
           <ul class={styles.contentList}>
-            <li><Link to="/content1">หน่วยเศรษฐกิจ</Link></li>
-            <li><Link to="/content1">ระบบเศรษฐกิจ</Link></li>
+            <li><Link to="/content2">หน่วยเศรษฐกิจ</Link></li>
+            <li><Link to="/content3">ระบบเศรษฐกิจ</Link></li>
           </ul>
         </div>
       </div>
