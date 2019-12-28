@@ -6,8 +6,6 @@ import MOCK_USER_DATA from "../../shared/data/user";
 
 import Card from "../../shared/UI/Card/Card";
 
-// const
-
 export default function DashboardPage() {
   return (
     <div>
