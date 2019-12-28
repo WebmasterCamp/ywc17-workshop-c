@@ -11,7 +11,7 @@ import QuestionNavigation from "../../shared/UI/QuestionNavigation/QuestionNavig
 export default function QuizPage() {
   const [questions, setQuestions] = useState(MOCK_QUESTIONS);
   const [answers, setAnswers] = useState([]);
-  const [bookmark, setBookmark] = useState([]);
+  const [bookmarks, setBookmarks] = useState([]);
   const { currentQuestionNumber } = useParams();
   const history = useHistory();
 
@@ -37,7 +37,13 @@ export default function QuizPage() {
     });
   };
 
-  const bookmarkHandler = () => {};
+  const bookmarkHandler = (questionNumber) => {
+    setBookmarks(prevBookmark => {
+      let copied = [...prevBookmark];
+      copied[questionNumber - 1] = !copied[questionNumber - 1];
+      return copied;
+    })
+  };
 
   return (
     <div className={styles.container}>
@@ -46,16 +52,19 @@ export default function QuizPage() {
         isLast={parseInt(currentQuestionNumber) === questions.length}
         questionNumber={currentQuestionNumber}
         question={questions[currentQuestionNumber - 1]}
+        isBookmark={!!bookmarks[currentQuestionNumber - 1]}
         isAnswer={false}
         onNextQuestion={nextQuestionHandler}
         onPrevQuestion={prevQuestionHandler}
         onAnswer={answerHandler}
+        onBookmark={bookmarkHandler}
       />
       <QuestionNavigation
         numberofQuestion={questions.length}
         currentQuestionNumber={currentQuestionNumber}
         onChangeQuestion={setQuestionHandler}
-        currentAnswer={answers}
+        currentAnswers={answers}
+        currentBookmarks={bookmarks}
       />
     </div>
   );
