@@ -3,6 +3,7 @@ import React from 'react'
 import styles from './Question.module.css'
 import Button from '../Button/Button';
 import Choice from '../Choice/Choice';
+import AnswerExplanation from '../AnswerExplanation/AnswerExplanation';
 
 export default function Question(props) {
     return (
@@ -17,6 +18,7 @@ export default function Question(props) {
                 <Button data="Back"></Button>
                 <Button data="Next"></Button>
             </div>}
+            {props.isAnswer && <AnswerExplanation {...props}></AnswerExplanation>}
         </div>
 
     )

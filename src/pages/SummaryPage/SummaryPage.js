@@ -7,6 +7,7 @@ import Question from '../../shared/UI/Question/Question';
 import QuestionNavigation from '../../shared/UI/QuestionNavigation/QuestionNavigation';
 
 import MOCK_QUESTION from '../../shared/data/questions';
+import MOCK_STUDENTANSWER from '../../shared/data/studentAnswers';
 
 export default function SummaryPage() {
     return (
@@ -15,7 +16,7 @@ export default function SummaryPage() {
              <Chart />
              <ContentList />
              <QuestionNavigation />
-             <Question question={MOCK_QUESTION[0]} />
+             <Question question={MOCK_QUESTION[0]} isAnswer={true} studentAnswer={MOCK_STUDENTANSWER[0]} />
         </div>
     )
 }
