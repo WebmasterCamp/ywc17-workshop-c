@@ -1,7 +1,8 @@
-import React from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBookmark } from "@fortawesome/free-regular-svg-icons";
-import { faBookmark as solidBookmark } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import { useHistory } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookmark } from '@fortawesome/free-regular-svg-icons';
+import { faBookmark as solidBookmark } from '@fortawesome/free-solid-svg-icons';
 
 import styles from "./Question.module.css";
 
@@ -14,13 +15,20 @@ export default function Question(props) {
     props.onAnswer(props.questionNumber, choiceIndex);
   };
 
+let history = useHistory();
+
+    const submitAnswerHandler = () => {
+       if (window.confirm("คุณแน่ใจหรือไม่ที่จะส่งคำตอบ")) {
+        history.push("/summary");
+       }
+    }
   return (
     <div className={styles.container}>
       <div className={styles.header}>
         <h2 className={styles.question}>
           {props.questionNumber}. {props.question.question}
         </h2>
-        {props.isBookmark && (props.isBookmark ? (
+        {!props.isBookmark && (props.isBookmark ? (
           <FontAwesomeIcon
             icon={solidBookmark}
             color="#E08322"
@@ -50,12 +58,9 @@ export default function Question(props) {
       </div>
       {!props.isAnswer && (
         <div className={styles.navigation}>
-          {!props.isFirst && (
-            <Button data="Back" onClick={props.onPrevQuestion}></Button>
-          )}
-          {!props.isLast && (
-            <Button data="Next" onClick={props.onNextQuestion}></Button>
-          )}
+                {!props.isFirst && <Button onClick={props.onPrevQuestion}>ข้อก่อนหน้า</Button>}
+                {!props.isLast && <Button onClick={props.onNextQuestion}>ข้อถัดไป</Button>}
+                {props.isLast && <Button onClick={submitAnswerHandler}>ส่งคำตอบ</Button>}
         </div>
       )}
       {props.isAnswer && <AnswerExplanation {...props}></AnswerExplanation>}
