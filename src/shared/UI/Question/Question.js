@@ -37,7 +37,7 @@ export default function Question(props) {
         <h2 className={styles.question}>
           {props.questionNumber}. {props.question.question}
         </h2>
-        {/* <div style={{display: 'flex', justifyContent: 'space-around'}}>{props.isAnswer && props.question.topics.map(topic => <div style={{border: '1px solid black', borderRadius: '1rem', padding: '.5rem', margin: '0 1rem'}}>{topic}</div>)}</div> */}
+        <div style={{display: 'flex', justifyContent: 'space-around'}}>{props.isAnswer && props.question.topics.map(topic => <div style={{border: '1px solid black', borderRadius: '1rem', padding: '.5rem', margin: '0 1rem'}}>{topic}</div>)}</div>
         {props.isBookmark ? (
           <FontAwesomeIcon icon={solidBookmark} color="#E08322" size="2x" onClick={bookmarkHandler} />
         ) : (
