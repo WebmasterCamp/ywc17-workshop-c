@@ -24,6 +24,8 @@ export default function Question(props) {
     }
   };
 
+  let bookmarkHandler = (() => props.onBookmark(props.questionNumber)) || (() => {});
+
   return (
     <div className={styles.container}>
       <h2 className={styles.question}>
@@ -32,12 +34,12 @@ export default function Question(props) {
       {props.isBookmark ? (
         <FontAwesomeIcon
           icon={solidBookmark}
-          onClick={props.onBookmark.bind(null, props.questionNumber)}
+          onClick={bookmarkHandler}
         />
       ) : (
         <FontAwesomeIcon
           icon={faBookmark}
-          onClick={props.onBookmark.bind(null, props.questionNumber)}
+          onClick={bookmarkHandler}
         />
       )}
       <div className={styles.choices}>
