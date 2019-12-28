@@ -4,7 +4,7 @@ import { Bar } from "react-chartjs-2";
 import styles from "./Chart.module.css";
 
 const data = {
-  labels: ["พื้นฐานเศรษฐศาสตร์", "ปัจจัยการผลิต"],
+  labels: ["ประวัติความเป็นมา","หน่วยเศรษฐกิจ", "ระบบเศรษฐกิจ"],
   datasets: [
     {
       label: "จำนวนข้อที่ตอบถูก",
@@ -13,7 +13,7 @@ const data = {
       borderWidth: 1,
       hoverBackgroundColor: "rgba(102, 204, 184, .4)",
       hoverBorderColor: "rgba(102, 204, 184, 1)",
-      data: [ 2, 1]
+      data: [1, 0, 1]
     },
     {
       label: "จำนวนข้อที่ตอบผิด",
@@ -22,7 +22,7 @@ const data = {
       borderWidth: 1,
       hoverBackgroundColor: "rgba(239, 102, 159, .4)",
       hoverBorderColor: "rgba(239, 102, 159, .1)",
-      data: [2, 0]
+      data: [0, 1, 2]
     }
   ]
 };
