@@ -20,20 +20,21 @@ export default function SummaryPage() {
         <h3>เรื่อง เศรษฐศาสตร์</h3>
       </div>
       <Chart />
-      <h2 style={{marginTop: '3rem', textAlign: 'center'}}>คะแนนรวม 3/5</h2>
+      <h1 style={{marginTop: '3rem', textAlign: 'center'}}>คะแนนรวม 2/5</h1>
       <div className={styles.contentListContainer}>
         {/* <ContentList />
         <ContentList /> */}
         <div classname={styles.contentWrapper}>
           <h2>เนื้อหาที่ทำได้ดี</h2>
           <ul class={styles.contentList}>
-            <li><Link to="/content1">ปัจจัยการผลิต</Link></li>
+            <li><Link to="/content1">ประวัติความเป็นมา</Link></li>
           </ul>
         </div>
         <div classname={styles.contentWrapper}>
           <h2>เนื้อหาที่ควรศึกษาเพิ่มเติม</h2>
           <ul class={styles.contentList}>
-            <li><Link to="/content1">พื้นฐานเศรษฐศาสตร์</Link></li>
+            <li><Link to="/content1">หน่วยเศรษฐกิจ</Link></li>
+            <li><Link to="/content1">ระบบเศรษฐกิจ</Link></li>
           </ul>
         </div>
       </div>

@@ -27,9 +27,9 @@ export default function Question(props) {
   //   ? () => props.onBookmark(props.questionNumber)
   //   : () => {};
 
-  let bookmarkHandler = () => props.onBookmark(props.questionNumber)
+  let bookmarkHandler = () => props.onBookmark(props.questionNumber);
 
-    let isCorrect = props.question.answer == props.studentAnswer;
+  let isCorrect = props.question.answer == props.studentAnswer;
 
   return (
     <div className={styles.container}>
@@ -37,12 +37,38 @@ export default function Question(props) {
         <h2 className={styles.question}>
           {props.questionNumber}. {props.question.question}
         </h2>
-        <div style={{display: 'flex', justifyContent: 'space-around'}}>{props.isAnswer && props.question.topics.map(topic => <div style={{border: '1px solid black', borderRadius: '1rem', padding: '.5rem', margin: '0 1rem'}}>{topic}</div>)}</div>
-        {props.isBookmark ? (
-          <FontAwesomeIcon icon={solidBookmark} color="#E08322" size="2x" onClick={bookmarkHandler} />
-        ) : (
-          <FontAwesomeIcon icon={faBookmark} color="#E08322" size="2x" onClick={bookmarkHandler} />
-        )}
+        <div className={styles.headerRight}>
+          <div style={{ display: "flex", justifyContent: "space-around" }}>
+            {props.isAnswer &&
+              props.question.topics.map(topic => (
+                <div
+                  style={{
+                    border: "1px solid black",
+                    borderRadius: "1rem",
+                    padding: ".5rem",
+                    margin: "0 1rem"
+                  }}
+                >
+                  {topic}
+                </div>
+              ))}
+          </div>
+          {props.isBookmark ? (
+            <FontAwesomeIcon
+              icon={solidBookmark}
+              color="#E08322"
+              size="2x"
+              onClick={bookmarkHandler}
+            />
+          ) : (
+            <FontAwesomeIcon
+              icon={faBookmark}
+              color="#E08322"
+              size="2x"
+              onClick={bookmarkHandler}
+            />
+          )}
+        </div>
       </div>
 
       <div className={styles.choices}>
@@ -83,9 +109,49 @@ export default function Question(props) {
         </div>
       )}
       {props.isAnswer && (
-        <div style={{marginBottom: '2rem'}}>
-        {isCorrect && <p>คุณตอบคำถามได้<span style={{fontWeight: 'bold', textDecoration: 'underline', color: "#66CCB8"}}>ถูกต้อง</span> {props.question.answerExplanation[props.question.answer]}</p>}
-      {!isCorrect && <p>คุณเลือก <span style={{fontWeight: 'bold', textDecoration: 'underline',  color: "#FB8870"}}>"{props.question.choices[props.studentAnswer]}"</span> ซึ่ง {props.question.answerExplanation[props.studentAnswer]} ดังนั้น <span style={{fontWeight: 'bold', textDecoration: 'underline',  color: "#18c7a5"}}>"{props.question.choices[props.question.answer]}"</span> เป็นคำตอบที่ถูกต้อง เนื่องจาก {props.question.answerExplanation[props.question.answer]}</p>}
+        <div style={{ marginBottom: "2rem" }}>
+          {isCorrect && (
+            <p>
+              คุณตอบคำถามได้
+              <span
+                style={{
+                  fontWeight: "bold",
+                  textDecoration: "underline",
+                  color: "#66CCB8"
+                }}
+              >
+                ถูกต้อง
+              </span>{" "}
+              {props.question.answerExplanation[props.question.answer]}
+            </p>
+          )}
+          {!isCorrect && (
+            <p>
+              คุณเลือก{" "}
+              <span
+                style={{
+                  fontWeight: "bold",
+                  textDecoration: "underline",
+                  color: "#FB8870"
+                }}
+              >
+                "{props.question.choices[props.studentAnswer]}"
+              </span>{" "}
+              ซึ่ง {props.question.answerExplanation[props.studentAnswer]}{" "}
+              ดังนั้น{" "}
+              <span
+                style={{
+                  fontWeight: "bold",
+                  textDecoration: "underline",
+                  color: "#18c7a5"
+                }}
+              >
+                "{props.question.choices[props.question.answer]}"
+              </span>{" "}
+              เป็นคำตอบที่ถูกต้อง เนื่องจาก{" "}
+              {props.question.answerExplanation[props.question.answer]}
+            </p>
+          )}
         </div>
       )}
     </div>

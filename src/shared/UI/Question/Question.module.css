@@ -42,3 +42,8 @@
 p {
     line-height: 1.5;
 }
+
+.headerRight {
+    display: flex;
+    flex-direction: row;
+}
