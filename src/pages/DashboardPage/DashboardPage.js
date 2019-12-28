@@ -13,7 +13,7 @@ export default function DashboardPage() {
         <div>
             DashboardPage
             <Button />
-            {questions && questions.map(question => <Question question={question} isAnswer={true} />)}
+            {questions && questions.map(question => <Question question={question} isAnswer={false} />)}
         </div>
     )
 

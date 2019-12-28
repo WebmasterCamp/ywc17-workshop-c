@@ -13,7 +13,7 @@ export default function Question(props) {
                     props.question.choices && props.question.choices.map(choice => <Choice data={choice}></Choice>)
                 }
             </div>
-            {!props.isAnswer && <div className={styles.navication}>
+            {!props.isAnswer && <div className={styles.navigation}>
                 <Button data="Back"></Button>
                 <Button data="Next"></Button>
             </div>}
