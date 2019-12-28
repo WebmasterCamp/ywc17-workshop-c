@@ -3,3 +3,13 @@
     align-items: center;
     flex-direction: column;
 }
+
+.header {
+    margin-bottom: 36px;
+    text-align: center;
+}
+
+.description {
+    margin-top: 12px;
+    font-size: 20px;
+}

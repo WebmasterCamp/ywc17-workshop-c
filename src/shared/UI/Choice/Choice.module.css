@@ -1,21 +1,49 @@
 .container {
-    height: 80px;
-    background: #ffffff 0% 0% no-repeat padding-box;
-    box-shadow: 3px 3px 5px #00000059;
-    border-radius: 12px;
-    display: flex;
-  }
-  
-  .colorBar {
-      width: 80px;
-      height: 100%;
-      border-radius: 12px 0px 0px 12px;
-      background-color: aqua;
-  }
+  height: 80px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 3px 3px 5px #00000059;
+  border-radius: 12px;
+  display: flex;
+  margin-bottom: 16px;
+}
 
-  .data {
-      display: flex;
-      align-items: center;
-      margin: 12px;
-  }
-  
+.colorBar {
+  width: 80px;
+  height: 100%;
+  border-radius: 12px 0px 0px 12px;
+  background-color: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorBarSelected {
+  width: 80px;
+  height: 100%;
+  border-radius: 12px 0px 0px 12px;
+  background: transparent linear-gradient(180deg, #35529e 0%, #c5aacd 100%) 0%
+    0% no-repeat padding-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.data {
+  display: flex;
+  align-items: center;
+  margin: 12px;
+}
+
+.circle {
+  border: 7px solid #7e7e7e;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}
+
+.circleSelected {
+  border: 7px solid #ffffff;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+}

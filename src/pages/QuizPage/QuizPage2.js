@@ -47,6 +47,10 @@ export default function QuizPage() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.header}>
+        <h1>คณิตศาสตร์พื้นฐาน 2 เรื่อง สมการเชิงเส้น</h1>
+        <p className={styles.description}>แบบทดสอบก่อนเรียน พื้นฐานบทเรียน</p>
+      </div>
       <Question
         isFirst={parseInt(currentQuestionNumber) === 1}
         isLast={parseInt(currentQuestionNumber) === questions.length}
