@@ -1,6 +1,6 @@
 .container {
-    height: 140px;
-    width: 320px;
+    height: 80px;
+    width: 500px;
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 3px 3px 5px #00000059;
     border-radius: 12px;
@@ -8,8 +8,9 @@
   }
   
   .colorBar {
-      width: 40px;
+      width: 100px;
       height: 100%;
       border-radius: 12px 0px 0px 12px;
+      background-color: aqua;
   }
   

@@ -8,9 +8,6 @@ export default function Choice(props) {
     <div className={styles.container}>
       <div
         className={styles.colorBar}
-        style={{
-          background: `transparent linear-gradient(180deg, #32529D 0%, , #C5AACD 100%) 0% 0% no-repeat padding-box`
-        }}
       />
     </div>
   );

@@ -15,7 +15,7 @@ export default function Question(props) {
                 }
             </div>
             {!props.isAnswer && <div className={styles.navigation}>
-                {!props.isFirst && <Button data="Back" onClick={props.onPrevQuestion}></Button>}
+                {!props.isFirst && <Button data="Back" onClick={props.onPrevQuestion} ></Button>}
                 {!props.isLast && <Button data="Next" onClick={props.onNextQuestion}></Button>}
             </div>}
             {props.isAnswer && <AnswerExplanation {...props}></AnswerExplanation>}
