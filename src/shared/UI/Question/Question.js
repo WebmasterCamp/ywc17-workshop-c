@@ -52,7 +52,7 @@ export default function Question(props) {
               index={index}
               onChoose={answerQuestionHandler}
               isSelect={index == props.studentAnswer}
-              isCorrect={isCorrect}
+              isCorrect={index == props.question.answer}
               {...props}
             />
           ))}
@@ -80,7 +80,6 @@ export default function Question(props) {
           )}
         </div>
       )}
-      {props.isAnswer && <AnswerExplanation {...props}></AnswerExplanation>}
       {props.isAnswer && (
         <>
         {isCorrect && <p>คุณตอบคำถามได้ถูกต้อง {props.question.answerExplanation[props.question.answer]}</p>}

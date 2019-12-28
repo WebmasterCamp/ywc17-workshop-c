@@ -19,7 +19,7 @@ export default function Card(props) {
           <p>{props.course.description}</p>
         </div>
         <div className={styles.bottom}>
-          <p>จำนวน {props.course.questionLength} ข้อ</p>
+          <div className={styles.lenght}>จำนวน {props.course.questionLength} ข้อ</div>
           <Link
             to={{
               pathname: "/quiz/1",
@@ -30,7 +30,7 @@ export default function Card(props) {
               }
             }}
           >
-            <Button>เริ่มแบบทดสอบ</Button>
+            <Button isSmall={true}>เริ่มแบบทดสอบ</Button>
           </Link>
         </div>
       </div>

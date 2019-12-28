@@ -22,8 +22,8 @@
     color: white;
 }
 
-.marked {
-    border: 7px double black;
+.notMark {
+    border: 3px black ;
 }
 
 .doneStatus.marked {
