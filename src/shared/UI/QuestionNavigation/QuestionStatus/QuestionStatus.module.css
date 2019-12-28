@@ -30,6 +30,10 @@
     border: 7px double white;
 }
 
+.marked {
+    border: 7px double black;
+}
+
 p {
     padding: 0!important;
 }
