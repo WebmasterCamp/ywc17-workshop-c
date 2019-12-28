@@ -2,6 +2,11 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import Button from './shared/UI/Button/Button'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faUsers } from '@fortawesome/free-solid-svg-icons'
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +23,8 @@ function App() {
         >
           Learn React
         </a>
+        <Button />
+         <FontAwesomeIcon icon={faUsers} />
       </header>
     </div>
   );
