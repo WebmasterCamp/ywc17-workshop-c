@@ -1,5 +1,11 @@
 @import url("https://fonts.googleapis.com/css?family=Kanit:300,500|Sarabun&display=swap&subset=thai");
 
 h1 {
-  font-family:  "Kanit", serif;
+  font-family: "Kanit", serif;
+  font-size: 32px;
+}
+
+h2 {
+  font-family: "Kanit", serif;
+  font-size: 24px;
 }
