@@ -1,0 +1,10 @@
+.footerContainer {
+    max-height: 100px;
+    min-height: 88px;
+    background: #3A3A3A;
+    color: white;
+}
+
+.flex {
+    display: flex;
+}
