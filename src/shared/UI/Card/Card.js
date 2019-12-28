@@ -4,7 +4,10 @@ import styles from './Card.module.css'
 export default function Card() {
     return (
         <div>
-            Card
+            <h1></h1>
+            <h2></h2>
+            <p></p>
+            <button></button>
         </div>
     )
 }
