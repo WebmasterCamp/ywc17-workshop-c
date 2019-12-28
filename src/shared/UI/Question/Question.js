@@ -12,7 +12,7 @@ export default function Question(props) {
 
     return (
         <div className={styles.container}>
-            <h2 className={styles.question}>{props.questionNumber} {props.question.question}</h2>
+            <h2 className={styles.question}>{props.questionNumber}. {props.question.question}</h2>
             <div className={styles.choices}>
                 {
                     props.question.choices && props.question.choices.map((choice, index) => <Choice key={index} data={choice} index={index} onChoose={answerQuestionHandler} />)

@@ -7,6 +7,7 @@ export default function Choice(props) {
       <div
         className={styles.colorBar}
       />
+      <h3 className={styles.data}>{props.data}</h3>
     </div>
   );
 }

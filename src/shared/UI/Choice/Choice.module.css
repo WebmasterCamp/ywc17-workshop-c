@@ -1,6 +1,5 @@
 .container {
     height: 80px;
-    width: 500px;
     background: #ffffff 0% 0% no-repeat padding-box;
     box-shadow: 3px 3px 5px #00000059;
     border-radius: 12px;
@@ -12,5 +11,11 @@
       height: 100%;
       border-radius: 12px 0px 0px 12px;
       background-color: aqua;
+  }
+
+  .data {
+      display: flex;
+      align-items: center;
+      margin: 12px;
   }
   
