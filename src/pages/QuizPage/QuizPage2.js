@@ -24,7 +24,7 @@ export default function QuizPage() {
   return (
     <div>
       <QuestionNavigation numberofQuestion={questions.length} />
-      <Question isFirst={true} isLast={false} questionNumber={1} question={MOCK_QUESTIONS[0]} isAnswer={false} onNextQuestion={nextQuestionHandler} onPrevQuestion={prevQuestionHandler} />
+      <Question isFirst={parseInt(currentQuestionNumber) === 1} isLast={parseInt(currentQuestionNumber) === questions.length} questionNumber={currentQuestionNumber} question={questions[currentQuestionNumber - 1]} isAnswer={false} onNextQuestion={nextQuestionHandler} onPrevQuestion={prevQuestionHandler} />
     </div>
   );
 }
