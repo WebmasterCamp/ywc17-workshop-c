@@ -84,8 +84,8 @@ export default function Question(props) {
       )}
       {props.isAnswer && (
         <div style={{marginBottom: '2rem'}}>
-        {isCorrect && <p>คุณตอบคำถามได้ถูกต้อง {props.question.answerExplanation[props.question.answer]}</p>}
-      {!isCorrect && <p>คุณเลือก "{props.question.choices[props.studentAnswer]}" ซึ่ง {props.question.answerExplanation[props.studentAnswer]} ดังนั้น "{props.question.choices[props.question.answer]}" เป็นคำตอบที่ถูกต้อง เนื่องจาก {props.question.answerExplanation[props.question.answer]}</p>}
+        {isCorrect && <p>คุณตอบคำถามได้<span style={{fontWeight: 'bold', textDecoration: 'underline', color: "#66CCB8"}}>ถูกต้อง</span> {props.question.answerExplanation[props.question.answer]}</p>}
+      {!isCorrect && <p>คุณเลือก <span style={{fontWeight: 'bold', textDecoration: 'underline',  color: "#FB8870"}}>"{props.question.choices[props.studentAnswer]}"</span> ซึ่ง {props.question.answerExplanation[props.studentAnswer]} ดังนั้น <span style={{fontWeight: 'bold', textDecoration: 'underline',  color: "#18c7a5"}}>"{props.question.choices[props.question.answer]}"</span> เป็นคำตอบที่ถูกต้อง เนื่องจาก {props.question.answerExplanation[props.question.answer]}</p>}
         </div>
       )}
     </div>
