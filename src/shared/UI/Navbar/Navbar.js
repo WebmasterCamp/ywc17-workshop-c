@@ -1,14 +1,4 @@
 import React from 'react'
-<<<<<<< HEAD
-import styles from './Navbar.module.css'
-
-export default function Navbar() {
-    return (
-        <div>
-            
-        </div>
-    )
-=======
 import { Link } from 'react-router-dom'
 
 import styles from './Navbar.module.css'
@@ -29,5 +19,4 @@ export default function Navbar() {
       </ul>
     </nav>
   )
->>>>>>> 37dd6ea9d114bd25c92414137274505c94584df3
 }
