@@ -31,3 +31,15 @@
 .contentWrapper {
     margin: 5rem auto;
 }
+
+.contentListContainer a {
+    text-decoration: underline;
+}
+
+.contentListContainer a:visited {
+    color: black;
+}
+
+.contentListContainer a:hover {
+    color: #66CCB8;
+}

@@ -12,7 +12,7 @@ export default function Navbar() {
   return (
     <nav className={styles.navigation}>
       <Centered>
-      <Logo />
+        <Logo />
       </Centered>
     </nav>
   );
