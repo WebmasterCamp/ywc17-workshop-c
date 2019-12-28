@@ -15,6 +15,7 @@ export default function Question(props) {
     props.onAnswer(props.questionNumber, choiceIndex);
   };
 
+
   let history = useHistory();
 
   const submitAnswerHandler = () => {
@@ -47,6 +48,7 @@ export default function Question(props) {
               data={choice}
               index={index}
               onChoose={answerQuestionHandler}
+              {...props}
             />
           ))}
       </div>
