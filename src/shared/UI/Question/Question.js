@@ -27,6 +27,8 @@ export default function Question(props) {
     ? () => props.onBookmark(props.questionNumber)
     : () => {};
 
+    let isCorrect = props.question.answer == props.studentAnswer;
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
@@ -48,7 +50,8 @@ export default function Question(props) {
               data={choice}
               index={index}
               onChoose={answerQuestionHandler}
-              isCorrect={props.question.answer == props.studentAnswer}
+              isSelect={index == props.studentAnswer}
+              isCorrect={isCorrect}
               {...props}
             />
           ))}
@@ -77,6 +80,12 @@ export default function Question(props) {
         </div>
       )}
       {props.isAnswer && <AnswerExplanation {...props}></AnswerExplanation>}
+      {props.isAnswer && (
+        <>
+        {isCorrect && <p>คุณตอบคำถามได้ถูกต้อง {props.question.answerExplanation[props.question.answer]}</p>}
+      {!isCorrect && <p>คุณเลือก {props.question.choices[props.studentAnswer]} ซึ่ง {props.question.answerExplanation[props.studentAnswer]} ดังนั้น {props.question.choices[props.question.answer]} เป็นคำตอบที่ถูกต้อง เนื่องจาก {props.question.answerExplanation[props.answer]}</p>}
+        </>
+      )}
     </div>
   );
 }

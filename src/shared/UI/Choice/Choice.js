@@ -3,10 +3,17 @@ import styles from "./Choice.module.css";
 
 export default function Choice(props) {
   let selected;
-  if (!props.isAnswer && props.currentAnswers[props.questionNumber - 1] == props.index) {
+  if (
+    !props.isAnswer &&
+    props.currentAnswers[props.questionNumber - 1] == props.index
+  ) {
     selected = styles.colorBarSelected;
   }
-  let chooseAnswerHandler = props.onChoose ? (() => {props.onChoose(props.index)}) : (() => {});
+  let chooseAnswerHandler = props.onChoose
+    ? () => {
+        props.onChoose(props.index);
+      }
+    : () => {};
   return (
     <div
       className={`${styles.container} ${selected}`}
