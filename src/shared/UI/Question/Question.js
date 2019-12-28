@@ -8,7 +8,7 @@ import AnswerExplanation from '../AnswerExplanation/AnswerExplanation';
 export default function Question(props) {
     return (
         <div className={styles.container}>
-            <div className={styles.question}>{props.questionNumber} {props.question.question}</div>
+            <h2 className={styles.question}>{props.questionNumber} {props.question.question}</h2>
             <div className={styles.choices}>
                 {
                     props.question.choices && props.question.choices.map((choice, index) => <Choice key={index} data={choice}></Choice>)

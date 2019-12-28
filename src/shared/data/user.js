@@ -12,13 +12,13 @@ export default {
                     questionLength: 20
                 },
                 {
-                    id: '1',
+                    id: '2',
                     name: 'สมการเชิงเส้นพื้นฐาน',
                     description: 'แบบทดสอบก่อนเรียน พื้นฐานบทเรียน',
                     questionLength: 20
                 },
                 {
-                    id: '1',
+                    id: '3',
                     name: 'สมการเชิงเส้นพื้นฐาน',
                     description: 'แบบทดสอบก่อนเรียน พื้นฐานบทเรียน',
                     questionLength: 20
