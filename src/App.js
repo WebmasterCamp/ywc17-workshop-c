@@ -1,16 +1,13 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
+import React from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-import Centered from './shared/Layout/Centered/Centered';
-import DashboardPage from './pages/DashboardPage/DashboardPage';
-import QuizPage from './pages/QuizPage/QuizPage2';
-import SummaryPage from './pages/SummaryPage/SummaryPage';
+import Centered from "./shared/Layout/Centered/Centered";
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
+import QuizPage from "./pages/QuizPage/QuizPage2";
+import SummaryPage from "./pages/SummaryPage/SummaryPage";
 
-import Navbar from './shared/UI/Navbar/Navbar';
+import Navbar from "./shared/UI/Navbar/Navbar";
+import Footer from "./shared/UI/Footer/Footer";
 
 export default function App() {
   return (
@@ -18,18 +15,19 @@ export default function App() {
       <>
         <Navbar />
         <Centered>
-        <Switch>
-          <Route exact path="/quiz">
-            <QuizPage />
-          </Route>
-          <Route exact path="/summary">
-            <SummaryPage />
-          </Route>
-          <Route exact path="/">
-            <DashboardPage />
-          </Route>
-        </Switch>
+          <Switch>
+            <Route exact path="/quiz">
+              <QuizPage />
+            </Route>
+            <Route exact path="/summary">
+              <SummaryPage />
+            </Route>
+            <Route exact path="/">
+              <DashboardPage />
+            </Route>
+          </Switch>
         </Centered>
+        <Footer />
       </>
     </Router>
   );
