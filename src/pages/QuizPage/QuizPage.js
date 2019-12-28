@@ -1,14 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import styles from './QuizPage.module.css';
 
+import MOCK_QUESTIONS from '../../shared/data/questions';
+
 import Question from '../../shared/UI/Question/Question';
-import MOCK_QUESTION from '../../shared/data/questions';
+import QuestionNavigation from '../../shared/UI/QuestionNavigation/QuestionNavigation';
 
 export default function QuizPage() {
+    const [questions, setQuestions] = useState(MOCK_QUESTIONS);
     return (
         <div>
-            <Question question={MOCK_QUESTION[0]} isAnswer={false} />
+            <Question question={MOCK_QUESTIONS[0]} isAnswer={false} />
         </div>
 
     )
