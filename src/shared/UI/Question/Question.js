@@ -12,10 +12,8 @@ import AnswerExplanation from "../AnswerExplanation/AnswerExplanation";
 
 export default function Question(props) {
   const answerQuestionHandler = choiceIndex => {
-    if (!props.isAnswer) 
-    props.onAnswer(props.questionNumber, choiceIndex);
+    if (!props.isAnswer) props.onAnswer(props.questionNumber, choiceIndex);
   };
-
 
   let history = useHistory();
 
@@ -25,24 +23,23 @@ export default function Question(props) {
     }
   };
 
-  let bookmarkHandler = props.onBookmark ? (() => props.onBookmark(props.questionNumber)) : (() => {});
+  let bookmarkHandler = props.onBookmark
+    ? () => props.onBookmark(props.questionNumber)
+    : () => {};
 
   return (
     <div className={styles.container}>
-      <h2 className={styles.question}>
-        {props.questionNumber}. {props.question.question}
-      </h2>
-      {props.isBookmark ? (
-        <FontAwesomeIcon
-          icon={solidBookmark}
-          onClick={bookmarkHandler}
-        />
-      ) : (
-        <FontAwesomeIcon
-          icon={faBookmark}
-          onClick={bookmarkHandler}
-        />
-      )}
+      <div className={styles.header}>
+        <h2 className={styles.question}>
+          {props.questionNumber}. {props.question.question}
+        </h2>
+        {props.isBookmark ? (
+          <FontAwesomeIcon icon={solidBookmark} color="#E08322" size="2x" onClick={bookmarkHandler} />
+        ) : (
+          <FontAwesomeIcon icon={faBookmark} color="#E08322" size="2x" onClick={bookmarkHandler} />
+        )}
+      </div>
+
       <div className={styles.choices}>
         {props.question.choices &&
           props.question.choices.map((choice, index) => (
@@ -58,13 +55,23 @@ export default function Question(props) {
       {!props.isAnswer && (
         <div className={styles.navigation}>
           {!props.isFirst && (
-            <Button onClick={props.onPrevQuestion} isBack={true}>ข้อก่อนหน้า</Button>
+            <Button
+              onClick={props.onPrevQuestion}
+              isBack={true}
+              className={styles.back}
+            >
+              ข้อก่อนหน้า
+            </Button>
           )}
           {!props.isLast && (
-            <Button onClick={props.onNextQuestion}>ข้อถัดไป</Button>
+            <Button onClick={props.onNextQuestion} className={styles.next}>
+              ข้อถัดไป
+            </Button>
           )}
           {props.isLast && (
-            <Button onClick={submitAnswerHandler}>ส่งคำตอบ</Button>
+            <Button onClick={submitAnswerHandler} className={styles.next}>
+              ส่งคำตอบ
+            </Button>
           )}
         </div>
       )}
