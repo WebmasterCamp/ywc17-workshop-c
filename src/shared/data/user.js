@@ -3,6 +3,7 @@ export default {
     subjects: [
         {
             name: 'ค22101 คณิตศาสตร์พื้นฐาน 2',
+            colors: ['#32529D', '#C5AACD'],
             courses: [
                 {
                     id: '1',
