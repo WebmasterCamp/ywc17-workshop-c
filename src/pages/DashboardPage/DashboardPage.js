@@ -2,10 +2,7 @@ import React from 'react'
 
 import styles from './DashboardPage.module.css';
 
-import Button from '../../shared/UI/Button/Button';
-import Question from '../../shared/UI/Question/Question';
-import questions from '../../shared/data/questions';
-
+import Card from '../../shared/UI/Card/Card';
 
 export default function DashboardPage() {
     return (
