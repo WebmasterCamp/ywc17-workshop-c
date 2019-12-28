@@ -16,7 +16,7 @@ export default function App() {
         <Navbar />
         <Centered>
           <Switch>
-            <Route exact path="/quiz">
+            <Route exact path="/quiz/:currentQuestionNumber">
               <QuizPage />
             </Route>
             <Route exact path="/summary">

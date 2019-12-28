@@ -8,15 +8,15 @@ import AnswerExplanation from '../AnswerExplanation/AnswerExplanation';
 export default function Question(props) {
     return (
         <div className={styles.container}>
-            <div className={styles.question}>1. {props.question.question}</div>
+            <div className={styles.question}>{props.questionNumber} {props.question.question}</div>
             <div className={styles.choices}>
                 {
-                    props.question.choices && props.question.choices.map(choice => <Choice data={choice}></Choice>)
+                    props.question.choices && props.question.choices.map((choice, index) => <Choice key={index} data={choice}></Choice>)
                 }
             </div>
             {!props.isAnswer && <div className={styles.navigation}>
-                <Button data="Back"></Button>
-                <Button data="Next"></Button>
+                {!props.isFirst && <Button data="Back" onClick={props.onPrevQuestion}></Button>}
+                {!props.isLast && <Button data="Next" onClick={props.onNextQuestion}></Button>}
             </div>}
             {props.isAnswer && <AnswerExplanation {...props}></AnswerExplanation>}
         </div>
