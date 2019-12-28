@@ -1,0 +1,24 @@
+.container {
+  /* width: 320px;
+  height: 100px; */
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 3px 3px 5px #00000059;
+  border-radius: 12px;
+  display: flex;
+}
+
+.colorBar {
+    width: 32px;
+    height: 100%;
+    border-radius: 12px 0px 0px 12px;
+}
+
+.course {
+    margin: 12px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
