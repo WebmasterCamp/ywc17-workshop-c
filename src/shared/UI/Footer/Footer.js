@@ -11,7 +11,7 @@ export default function Footer() {
   return (
     <div className={styles.footerContainer}>
       <Centered>
-        <ul className="flex">
+        {/* <ul className="flex">
           <li><Link>เกี่ยวกับ</Link></li>
           <li><Link>แจ้งปัญหา</Link></li>
           <li><Link>ติดต่อเรา</Link></li>
@@ -20,8 +20,8 @@ export default function Footer() {
           <li><FontAwesomeIcon activeClassName="active" icon={faFacebook} size="3x" /></li>
           <li><FontAwesomeIcon activeClassName="active" icon={faYoutube} size="3x" /></li>
           <li><FontAwesomeIcon activeClassName="active" icon={faTwitter} size="3x" /></li>
-        </ul>
-        <hr style={{color: '#7E7E7E'}} />
+        </ul> */}
+        {/* <hr style={{color: '#7E7E7E'}} /> */}
         <p style={{textAlign: 'center'}}>©2019 YWC#17 Group C</p>
       </Centered>
     </div>

@@ -48,6 +48,7 @@ export default function Question(props) {
               data={choice}
               index={index}
               onChoose={answerQuestionHandler}
+              isCorrect={props.question.answer == props.studentAnswer}
               {...props}
             />
           ))}

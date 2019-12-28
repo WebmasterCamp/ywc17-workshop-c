@@ -5,6 +5,7 @@ import Centered from "./shared/Layout/Centered/Centered";
 import DashboardPage from "./pages/DashboardPage/DashboardPage";
 import QuizPage from "./pages/QuizPage/QuizPage2";
 import SummaryPage from "./pages/SummaryPage/SummaryPage";
+import ContentPage from "./pages/ContentPage/ContentPage";
 
 import Navbar from "./shared/UI/Navbar/Navbar";
 import Footer from "./shared/UI/Footer/Footer";
@@ -22,6 +23,9 @@ export default function App() {
             <Route exact path="/summary">
               <SummaryPage />
             </Route>
+            <Route exact path="/content">
+              <ContentPage />
+            </Route>
             <Route exact path="/">
               <DashboardPage />
             </Route>
@@ -30,7 +34,7 @@ export default function App() {
             </Route>
           </Switch>
         </Centered>
-        {/* <Footer /> */}
+        <Footer />
       </>
     </Router>
   );

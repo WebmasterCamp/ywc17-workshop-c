@@ -13,7 +13,7 @@ const data = {
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(102, 204, 184, .4)',
       hoverBorderColor: 'rgba(102, 204, 184, 1)',
-      data: [0, 2, 3]
+      data: [0, 1, 0]
     },
     {
       label: 'จำนวนข้อที่ตอบผิด',
@@ -22,7 +22,7 @@ const data = {
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(239, 102, 159, .4)',
       hoverBorderColor: 'rgba(239, 102, 159, .1)',
-      data: [2, 4, 1]
+      data: [2, 2, 0]
     }
   ]
 };

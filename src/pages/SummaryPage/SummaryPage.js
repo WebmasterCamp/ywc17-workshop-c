@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 
 import styles from "./SummaryPage.module.css";
 import Chart from "../../shared/UI/Chart/Chart";
@@ -8,6 +9,7 @@ import QuestionNavigation from "../../shared/UI/QuestionNavigation/QuestionNavig
 
 import MOCK_QUESTION from "../../shared/data/questions";
 import MOCK_STUDENTANSWER from "../../shared/data/studentAnswers";
+import MOCK_BOOKMARK from '../../shared/data/studentBookmark'
 
 export default function SummaryPage() {
   return (
@@ -21,26 +23,27 @@ export default function SummaryPage() {
       <div className={styles.contentListContainer}>
         {/* <ContentList />
         <ContentList /> */}
-        <div>
+        <div classname={styles.contentWrapper}>
           <h2>จุดแข็ง</h2>
           <ul class={styles.contentList}>
-            <li>กลไกราคา</li>
+            <li><Link to="/content">กลไกราคา</Link></li>
           </ul>
         </div>
-        <div>
+        <div classname={styles.contentWrapper}>
           <h2>จุดอ่อน</h2>
           <ul class={styles.contentList}>
-            <li>พื้นฐานเศรษฐศาสตร์</li>
-            <li>ปัจจัยการผลิต</li>
+            <li><Link to="/content">พื้นฐานเศรษฐศาสตร์</Link></li>
+            <li><Link to="/content">ปัจจัยการผลิต</Link></li>
           </ul>
         </div>
       </div>
-      <Question
-        question={MOCK_QUESTION[0]}
+      {MOCK_QUESTION.map((question, index) => <Question
+        question={MOCK_QUESTION[index]}
+        questionNumber={index + 1}
         isAnswer={true}
-        studentAnswer={MOCK_STUDENTANSWER[0]}
-      />
-      <QuestionNavigation />
+        isBookmark={MOCK_BOOKMARK[index]}
+        studentAnswer={MOCK_STUDENTANSWER[index]}
+      />)}
     </>
   );
 }

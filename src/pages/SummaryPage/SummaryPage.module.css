@@ -1,6 +1,7 @@
 .contentListContainer {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    margin: 3rem 0;
 }
 
 .header {
@@ -19,8 +20,14 @@
     flex-direction: column;
     font-family: 'Sarabun';
     list-style: circle;
+    margin: 1rem auto;
+    line-height: 1.8;
 }
 
 .contentList h2 {
     margin-bottom: 1rem;
+}
+
+.contentWrapper {
+    margin: 5rem auto;
 }

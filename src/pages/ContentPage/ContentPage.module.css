@@ -1,0 +1,12 @@
+.contentContainer {
+    line-height: 1.5;
+}
+
+.contentContainer h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+hr {
+    margin-bottom: 3rem;
+}

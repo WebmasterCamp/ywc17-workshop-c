@@ -1,10 +1,15 @@
 .footerContainer {
     max-height: 100px;
-    min-height: 88px;
+    min-height: 30px;
     background: #3A3A3A;
     color: white;
 }
 
 .flex {
     display: flex;
+}
+
+p {
+    padding-top: 1rem;
+    padding-bottom: 2rem;
 }
