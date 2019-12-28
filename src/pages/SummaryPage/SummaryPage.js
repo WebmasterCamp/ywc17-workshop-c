@@ -13,7 +13,7 @@ import MOCK_BOOKMARK from '../../shared/data/studentBookmark'
 
 export default function SummaryPage() {
   return (
-    <>
+    <div style={{marginBottom: '3rem'}}>
       <div className={styles.header}>
         <h1>ผลวิเคราะห์การทำแบบทดสอบ</h1>
         <h2>รายวิชา ส21102 สังคมศึกษา 3</h2>
@@ -44,6 +44,6 @@ export default function SummaryPage() {
         isBookmark={MOCK_BOOKMARK[index]}
         studentAnswer={MOCK_STUDENTANSWER[index]}
       />)}
-    </>
+    </div>
   );
 }

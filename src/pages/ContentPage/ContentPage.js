@@ -1,8 +1,11 @@
-import React from "react";
+import React, {useEffect} from "react";
 
 import styles from "./ContentPage.module.css";
 
 export default function ContentPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
   return (
     <div className={styles.contentContainer}>
       <h1>สรุปเนื้อหา เศรษฐศาสตร์</h1>
