@@ -22,6 +22,10 @@
     background-color: #66CCB8;
 }
 
+.doneStatus:hover {
+    background-color: #21a68c;
+}
+
 .notMark {
     border: 3px black ;
 }
