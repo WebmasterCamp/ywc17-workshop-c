@@ -1,3 +1,10 @@
 .button {
-    background-color: red;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    font-size: .8rem;
+    background-color: #66CCB8;
+    color: white;
+    border: none;
+    border-radius: .4rem;
+    padding: .1rem .3rem;
 }
