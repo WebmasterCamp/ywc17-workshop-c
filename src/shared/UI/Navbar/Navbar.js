@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUserCircle } from "@fortawesome/free-solid-svg-icons";
+import { faUserCircle } from "@fortawesome/free-regular-svg-icons";
 
 import styles from "./Navbar.module.css";
 import Logo from "../Logo/Logo";
@@ -14,18 +14,16 @@ export default function Navbar() {
       <Centered>
         <ul className={styles.menuContainer}>
           <Logo />
+          <div style={{marginRight: '2rem'}}></div>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink activeClassName="active" to="/" exact>หน้าหลัก</NavLink>
           </li>
           <li>
-            <Link to="/quiz/1">Quiz</Link>
-          </li>
-          <li>
-            <Link to="/summary">Summary</Link>
+            <NavLink to="/quiz/1">ผลการทดสอบ</NavLink>
           </li>
           <div style={{margin: 'auto'}}></div>
           <li>
-            <FontAwesomeIcon icon={faUserCircle} size="lg" />
+            <FontAwesomeIcon activeClassName="active" icon={faUserCircle} size="3x" color="#66CCB8" />
           </li>
         </ul>
       </Centered>

@@ -2,11 +2,17 @@
     min-height: 70px;
     margin-bottom: 3rem;
     box-shadow: 3px 3px 5px #00000059;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: #C9C9C9;
+    background: rgba(0, 0, 0, .5);
 }
 
 .menuContainer {
     display: flex;
-    align-items: center;    
+    align-items: center;  
+    padding-top: .2rem;  
 }
 
 .menuContainer li {
@@ -15,4 +21,13 @@
 
 .menuContainer li a {
     text-decoration: none;
+}
+
+.menuContainer li a:visited {
+    color: #C9C9C9;
+}
+
+.menuContainer li a:hover {
+    color: white;
+    border-bottom: 2px solid #66CCB8;
 }
