@@ -27,14 +27,13 @@ export default function SummaryPage() {
         <div classname={styles.contentWrapper}>
           <h2>เนื้อหาที่ทำได้ดี</h2>
           <ul class={styles.contentList}>
-            <li>-</li>
+            <li><Link to="/content1">ปัจจัยการผลิต</Link></li>
           </ul>
         </div>
         <div classname={styles.contentWrapper}>
           <h2>เนื้อหาที่ควรศึกษาเพิ่มเติม</h2>
           <ul class={styles.contentList}>
-            <li><Link to="/content">พื้นฐานเศรษฐศาสตร์</Link></li>
-            <li><Link to="/content">ปัจจัยการผลิต</Link></li>
+            <li><Link to="/content1">พื้นฐานเศรษฐศาสตร์</Link></li>
           </ul>
         </div>
       </div>

@@ -1,5 +1,6 @@
 .questionStatusContainer {
-    border: 7px solid black;
+    border: 5px solid black;
+    margin: .3rem;
     border-radius: 100%;
     height: 30px;
     width: 30px;
@@ -18,8 +19,7 @@
 }
 
 .doneStatus {
-    background-color: green;
-    color: white;
+    background-color: #66CCB8;
 }
 
 .notMark {
