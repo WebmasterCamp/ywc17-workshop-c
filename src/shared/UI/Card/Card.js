@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import styles from "./Card.module.css";
 
 import Button from "../Button/Button";
@@ -17,7 +18,14 @@ export default function Card(props) {
         <p>{props.course.description}</p>
         <div className={styles.bottom}>
           <p>จำนวน {props.course.questionLength} ข้อ</p>
-          <Button data="เริ่มแบบทดสอบ"></Button>
+          <Link to={{
+            pathname: "/quiz/1",
+            data: {
+              name: props.course.name,
+              course: props.course,
+              color: props.color 
+            }
+          }}><Button>เริ่มแบบทดสอบ</Button></Link>
         </div>
       </div>
     </div>

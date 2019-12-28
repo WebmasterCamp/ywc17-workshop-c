@@ -17,15 +17,15 @@ export default function Question(props) {
     return (
         <div className={styles.container}>
             <h2 className={styles.question}>{props.questionNumber}. {props.question.question}</h2>
-            {props.isBookmark ? <FontAwesomeIcon icon={solidBookmark} onClick={props.onBookmark.bind(null, props.questionNumber)} /> : <FontAwesomeIcon icon={faBookmark} onClick={props.onBookmark.bind(null, props.questionNumber)} />}
+            {props.isBookmark && (props.isBookmark ? <FontAwesomeIcon icon={solidBookmark} onClick={props.onBookmark.bind(null, props.questionNumber)} /> : <FontAwesomeIcon icon={faBookmark} onClick={props.onBookmark.bind(null, props.questionNumber)} />)}
             <div className={styles.choices}>
                 {
                     props.question.choices && props.question.choices.map((choice, index) => <Choice key={index} data={choice} index={index} onChoose={answerQuestionHandler} />)
                 }
             </div>
             {!props.isAnswer && <div className={styles.navigation}>
-                {!props.isFirst && <Button data="Back" onClick={props.onPrevQuestion} ></Button>}
-                {!props.isLast && <Button data="Next" onClick={props.onNextQuestion}></Button>}
+                {!props.isFirst && <Button onClick={props.onPrevQuestion}>Back</Button>}
+                {!props.isLast && <Button onClick={props.onNextQuestion}>Next</Button>}
             </div>}
             {props.isAnswer && <AnswerExplanation {...props}></AnswerExplanation>}
         </div>
